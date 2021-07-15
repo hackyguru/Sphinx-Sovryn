@@ -1,28 +1,20 @@
-# sphinx-bridge
+# sphinx-sovryn
 
-**library for applications embedded within Sphinx apps**
+integration for sphinxchat and sovry network.
 
-### Load into your app
+### Loading into application using sphinx-bridge
 
 `npm install --save sphinx-bridge`
+`npm install`
 ```js
 import * as sphinx from 'sphinx-bridge'
 ```
-or
 ```html
 <script src="https://unpkg.com/sphinx-bridge@0.2.4/sphinx/sphinx.min.js"></script>
 ```
+`npm start`
+### Open Source License
+GPLv3
 
-### API
-
-All functions return a Promise, that resolves when the action has been completed in the Sphinx App
-
-- `sphinx.enable()`: Enable the sphinx library. This function will postMessage to the Sphinx app, requesting authorization, a budget to spend, and the user's pubkey (hex encoded)
-- `sphinx.keysend(pubkey, amount)`: Initiate a keysend (pubkey is hex encoded)
-- `sphinx.sendPayment(paymentRequest)`: Pay a Lightning invoice
-- `sphinx.makeInvoice(amount, memo)`: Create a Lightning invoice
-- `sphinx.signMessage(message)`: Request that the Sphinx app signs a message with Lightning private key
-- `sphinx.verifyMessage(signature, message)`: Verify a signed message
-- `sphinx.topup()`: Show the authorization modal again, so the user can top up their budget for the app
-- `sphinx.authorize(challenge, noBudget)`: Request the Sphinx app to sign a challenge with their Lightning private key. "noBudget" boolean set to `true` will prevent the app from showing the budget input.
-- `sphinx.updated()`: Utility function to let Sphinx app know that something has happened out of band (like a payment has been received), so satoshi balance should be refreshed in app.
+### Presentation/Documentation Link
+Please feel free to view the presentation at [this link](https://drive.google.com/drive/folders/1_sLV8iX2RVkvbU1q9K5se4eE3AqW6qdg?usp=sharing)
