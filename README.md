@@ -1,6 +1,6 @@
 # sphinx-sovryn
 
-integration for sphinxchat and sovry network.
+integration for sphinxchat and sovry network for sovrython.
 
 ### Loading into application using sphinx-bridge
 
